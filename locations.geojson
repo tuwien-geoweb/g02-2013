@@ -1,0 +1,42 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "Student": "Alex"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.387009620666504,
+          48.16236424172609
+        ]
+      }
+    },
+    { 
+     "type": "Feature",
+      "properties": {
+        "Student": "Bernadette"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.487009620666504,
+          48.16236424172609  ]
+      }
+    },
+    { 
+     "type": "Feature",
+      "properties": {
+        "Student": "Denise"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.350574493408203,
+          48.16116195751926 ]
+      }
+    }
+  ]
+}
