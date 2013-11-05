@@ -812,6 +812,10 @@ pre code {
   margin-left: -15px;
 }
 
+.map {
+    height: 600px;
+}
+
 .row:before,
 .row:after {
   display: table;
