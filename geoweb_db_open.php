@@ -4,7 +4,7 @@
 
 // Festlegung des Filenamens (Pfades) der Datenbank 
 // (kein User/Passwort bei SQLite erforderlich) 
-$dbname = '/scratch/users/geoweb2013/htdocs/g02/g02_db.sqlite';
+$dbname = '/scratch/users/geoweb2013/htdocs/g02/g02_spatial_db';
 
 // Datenbank öffnen mit new SQLite3(Filename, Flag)
 // Flag: 
