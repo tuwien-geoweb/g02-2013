@@ -16,7 +16,7 @@
       $teamflag=0;} 
 
   // Funktion mail(adress,subject,message,header) für Versenden per Mail 
-  mail( "e070946@student.tuwien.ac.at",  
+  mail( "@student.tuwien.ac.at",  
         "geoweb: Feedback Formular",  
         "Gesendet von ".$anrede." ".$name." (".$team."): ".$message,  
         "From: $email" )  
@@ -33,9 +33,9 @@
   // Die Werte sind bei Textfelder in (einfache) Hochkomma zu setzen,  
   // bei Zahlen ohne Hochkomma (hier nur bei teamflag) 
   // SQL-String zusammensetzen 
-  $sql = "INSERT INTO feedback (f_name,f_mail,f_anrede,f_msg,f_geoweb,f_datum)"; 
+  $sql = "INSERT INTO feedback (f_name,f_mail,f_anrede,f_msg,f_geoweb,f_datum, geom)"; 
   $sql = $sql . " VALUES ('" . $name . "','" . $email . "','" . $anrede .  
-         "','" . $message . "'," . $teamflag . ",'" . date("d-m-Y") . "')"; 
+         "','" . $message . "'," . $teamflag . ",'" . date("d-m-Y") . "','" . $geom . "')"; 
 
   // SQL-String an Datenbank-Server schicken (Beispiel SQLite-Datenbank:  
   $db->exec($sql) or die ('Fehler bei Speichern: '.$db->lastErrorMsg()); 
