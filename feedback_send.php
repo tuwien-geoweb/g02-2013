@@ -2,7 +2,6 @@
   $name = $_REQUEST['name'];  // $_REQUEST enthält die Benutzerangaben 
   $email = $_REQUEST['email']; 
   $message = $_REQUEST['message']
-  $geom = $_REQUEST['geom']; 
 
   if (isset($_REQUEST['geschlecht']))  
      {$anrede=$_REQUEST['geschlecht'];} // Frau/Herr 
