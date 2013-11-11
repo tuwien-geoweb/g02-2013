@@ -17,7 +17,7 @@
       $teamflag=0;} 
 
   // Funktion mail(adress,subject,message,header) für Versenden per Mail 
-  mail( "@student.tuwien.ac.at",  
+  mail( "e0740946@student.tuwien.ac.at",  
         "geoweb: Feedback Formular",  
         "Gesendet von ".$anrede." ".$name." (".$team."): ".$message,  
         "From: $email" )  
