@@ -2,7 +2,7 @@
   $name = $_REQUEST['name'];  // $_REQUEST enthält die Benutzerangaben 
   $email = $_REQUEST['email']; 
   $message = $_REQUEST['message'];
-  $long = $_REQUEST['long'];
+  $lon = $_REQUEST['lon'];
   $lat = $_REQUEST['lat']; 
 
   if (isset($_REQUEST['geschlecht']))  
