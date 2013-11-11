@@ -49,20 +49,32 @@
         
         <div id="text" class="col-md-6">
           <form role="form" method="POST" action="feedback_send.php">
+          
           <div class="radio">
             <label>
-            <input type="radio" name="geschlecht" id="optionsRadios1" value="Frau"/>
+            <input type="radio" name="geschlecht" id="optionsRadios1" value="Frau">
             Frau
             </label>
           </div>
+          
           <div class="radio">
             <label>
-            <input type="radio" name="geschlecht" id="optionsRadios2" value="Herr"/>
+            <input type="radio" name="geschlecht" id="optionsRadios2" value="Herr">
+            Herr
             </label>
           </div>
-          <input type="text" name="name" size="50" /></td> 
-          <input type="text" name="email" size="50" /></td> 
-          Feedback: <br /> 
+            
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Namen eingeben">
+         </div>  
+         
+         <div class="form-group">
+            <label for="name">Name</label>   
+            <input type="email" class="form-control" id="email" name="email" placeholder="E-Mail eingeben">
+          </div>   
+            
+            
           <textarea name="message" rows="10" cols="50"></textarea> 
           <br /> 
           <input type="checkbox" name="team" checked="checked" value="ON" /> 
