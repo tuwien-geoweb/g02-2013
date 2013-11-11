@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Grid Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="grid.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="ol.css">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+    
+    <!-- sets the div class span1, where the map is, to a height of 500px -->
+    <style> .span1 {
+        height: 500px;
+    }
+      
+    </style>
+  </head>
+
+  <body>
+    
+    <div class="container">
+    
+      <div class="row">
+        
+        <div class="col-md-6">
+        
+          <div id="map" class="span1">
+          </div>
+          
+        </div>
+        
+        <div id="text" class="col-md-6">
+          <h3>How to use bootstrap?</h3>
+          <ol>
+            <li>Get <a href="http://www.getbootstrap.com">bootstrap</a> </li>
+            <li>Copy CSS files to your directory</li>
+            <li>Set up a container with 2 columns</li>
+            <li>Insert your map on the left side</li>
+            <li><a href="http://getbootstrap.com/css/">Check bootstrap for useful examples</a></li>
+          </ol>
+              <h3>What is bootstrap?</h3>
+          <ul>
+            <li>Templates for responsive websites</li>
+            <li>Can also be applied for mobile devices</li>
+            <li>Free to use, check <a href="http://getbootstrap.com/getting-started/#license-faqs">licence requierments</a></li>
+            <li>Problem with fixed dimensions (px), workaround needed</li>
+          </ul>
+
+        </div>
+      
+      </div>
+      
+    </div>
+        
+             
+    <script src="ol.js"></script><script type="text/javascript">
+      var map = new ol.Map({
+      target: 'map',
+      renderer: ol.RendererHint.CANVAS,
+      view: new ol.View2D({
+        center: ol.proj.transform([16.37, 48.21], 'EPSG:4326', 'EPSG:3857'),
+        zoom: 11
+      }),
+      layers: [
+        new ol.layer.Tile({
+          source: new ol.source.MapQuestOpenAerial()
+        }),
+        new ol.layer.Vector({
+          source: new ol.source.Vector({
+            url: 'locations.geojson',
+            parser: new ol.parser.GeoJSON()
+          })
+        })
+      ]
+    });
+    </script>
+        
+  </body>
+</html>
