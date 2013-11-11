@@ -1,7 +1,9 @@
 <?php 
   $name = $_REQUEST['name'];  // $_REQUEST enthält die Benutzerangaben 
   $email = $_REQUEST['email']; 
-  $message = $_REQUEST['message'] ; 
+  $message = $_REQUEST['message'];
+  $long = $_REQUEST['long'];
+  $lat = $_REQUEST['lat']; 
 
   if (isset($_REQUEST['geschlecht']))  
      {$anrede=$_REQUEST['geschlecht'];} // Frau/Herr 
