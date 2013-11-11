@@ -13,6 +13,7 @@ $dbname = '/scratch/users/geoweb2013/htdocs/g02/g02_db.sqlite';
 // SQLITE3_OPEN_CREATE (erstellt Datenbank, falls sie nicht existiert). 
 
 $db = new SQLite3($dbname);
+$db->loadExtension('libspatialite.so');
 
 ?> 
 
