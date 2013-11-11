@@ -1,7 +1,7 @@
 <?php 
   $name = $_REQUEST['name'];  // $_REQUEST enthält die Benutzerangaben 
   $email = $_REQUEST['email']; 
-  $message = $_REQUEST['message']
+  $message = $_REQUEST['message'] ; 
 
   if (isset($_REQUEST['geschlecht']))  
      {$anrede=$_REQUEST['geschlecht'];} // Frau/Herr 
@@ -16,7 +16,7 @@
       $teamflag=0;} 
 
   // Funktion mail(adress,subject,message,header) für Versenden per Mail 
-  mail( "e0740946@student.tuwien.ac.at",  
+  mail( "e070946@student.tuwien.ac.at",  
         "geoweb: Feedback Formular",  
         "Gesendet von ".$anrede." ".$name." (".$team."): ".$message,  
         "From: $email" )  
