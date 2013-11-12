@@ -111,6 +111,9 @@
         
              
     <script src="ol.js"></script><script type="text/javascript">
+    
+    var map;
+    
     function initMap() {
       var map = new ol.Map({
       target: 'map',
@@ -132,12 +135,12 @@
       ]
     });
     }
-    function init(){
+    
+  function init(){
 
-  initMap(); // Set up base map
+  initMap(); 
 
-  // Initialize WMS layer from our local GeoServer
-  var bwms = new OpenLayers.Layer.WMS( "feedback",
+  var users = new OpenLayers.Layer.WMS( "feedback",
                   "http://student.ifip.tuwien.ac.at/geoserver/wms",
                   { 
                     "layers":"g02_2013:feedback",
@@ -145,8 +148,7 @@
                   { "reproject":"true" }
                   );
 
-  // Add WMS layer to our map
-  map.addLayer(bwms);
+  map.addLayer(users);
 
 }
     </script>
