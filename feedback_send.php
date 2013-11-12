@@ -17,13 +17,6 @@
      {$team="geoweb-extern"; 
       $teamflag=0;} 
 
-  // Funktion mail(adress,subject,message,header) für Versenden per Mail 
-  mail( "e070946@student.tuwien.ac.at",  
-        "geoweb: Feedback Formular",  
-        "Gesendet von ".$anrede." ".$name." (".$team."): ".$message,  
-        "From: $email" )  
-       OR DIE("Fehler: Feedback nicht gesendet.");   
-
   // Daten zusätzlich in Datenbank speichern (siehe auch PhpSql-Abschnitt) 
   // Tabelle feedback muss in Datenbank angelegt sein  
   // (Beispiel-Tabelle siehe geoweb/2013/ifip/ifip_db.sqlite-Datenbank) 
