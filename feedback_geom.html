@@ -130,7 +130,8 @@
         })
           var users = new OpenLayers.Layer.WMS( "Users",
                   "http://student.ifip.tuwien.ac.at/geoserver/wms",
-                  { "transparent":"true",
+                  { 
+                    "srs": 'EPSG:4269',
                     "layers":"g02_2013:feedback",
                     "format":"image/png" },
                   { "reproject":"true" }
