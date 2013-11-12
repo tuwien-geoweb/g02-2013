@@ -124,19 +124,10 @@
         }),
         new ol.layer.Vector({
           source: new ol.source.Vector({
-            url: 'locations.geojson',
+            url: 'users.geojson',
             parser: new ol.parser.GeoJSON()
           })
         })
-          var users = new OpenLayers.Layer.WMS( "feedback",
-                  "http://student.ifip.tuwien.ac.at/geoserver/wms",
-                  { 
-                    "srs": 'EPSG:4269',
-                    "layers":"g02_2013:feedback",
-                    "format":"image/png" },
-                  { "reproject":"true" }
-                  );
-          map.addLayer(users);
       ]
         
     });
