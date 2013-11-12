@@ -129,6 +129,24 @@
           })
         })
       ]
+      
+  function init(){
+
+  initMap(); // Set up base map
+
+  // Initialize WMS layer from our local GeoServer
+  var bwms = new OpenLayers.Layer.WMS( "feedback",
+                  "http://student.ifip.tuwien.ac.at/geoserver/wms?",
+                  { "transparent":"true",
+                    "layers":"g02_2013:feedback",
+                    "format":"image/png" },
+                  { "reproject":"true" }
+                  );
+
+  // Add WMS layer to our map
+  map.addLayer(bwms);
+
+}
         
     });
     </script>
