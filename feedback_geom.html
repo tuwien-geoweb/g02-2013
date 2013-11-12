@@ -111,6 +111,7 @@
         
              
     <script src="ol.js"></script><script type="text/javascript">
+    function initMap() {
       var map = new ol.Map({
       target: 'map',
       renderer: ol.RendererHint.CANVAS,
@@ -130,7 +131,7 @@
         })
       ]
     });
-    
+    }
     function init(){
 
   initMap(); // Set up base map
