@@ -129,6 +129,18 @@
           })
         })
       ]
+                               var users = new OpenLayers.Layer.WMS(
+                                 "Users", "http://student.ifip.tuwien.ac.at/geoserver/wms",
+                                 {
+                                         srs: 'EPSG:4326',
+                                         layers: 'g02_2013:feedback',
+                                         styles: '',
+                                         format:'image/png'
+                                 },
+                                 {singleTile: true, ratio: 1}
+                 );
+
+                 map.addLayer(users);
     });
     </script>
         
