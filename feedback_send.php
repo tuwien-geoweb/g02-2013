@@ -30,7 +30,7 @@
   // SQL-String zusammensetzen 
   $sql = "INSERT INTO feedback (f_name,f_mail,f_anrede,f_msg,f_geoweb,f_datum, geom)"; 
   $sql = $sql . " VALUES ('" . $name . "','" . $email . "','" . $anrede .  
-         "','" . $message . "'," . $teamflag . ",'" . date("d-m-Y") . "', GeomFromText('POINT(1.01 2.02)', 4326))"; 
+         "','" . $message . "'," . $teamflag . ",'" . date("d-m-Y") . "', GeomFromText('POINT(16.345596313476562 48.21129045708592)', 4326))"; 
 
   // SQL-String an Datenbank-Server schicken (Beispiel SQLite-Datenbank:  
   $db->exec($sql) or die ('Fehler bei Speichern: '.$db->lastErrorMsg()); 
