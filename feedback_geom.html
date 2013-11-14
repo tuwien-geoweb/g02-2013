@@ -127,7 +127,7 @@
         }),
         new ol.layer.Vector({
           source: new ol.source.Vector({
-            url: 'http://student.ifip.tuwien.ac.at/geoserver/g02_2013/wms?service=WMS&version=1.1.0&request=GetMap&layers=g02_2013:feedback&styles=&bbox=16.345596,16.357613,48.192412,48.21129&width=511&height=512&srs=EPSG:4326&format=application/openlayers',
+            url: 'http://student.ifip.tuwien.ac.at/geoserver/g02_2013/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g02_2013:feedback_02&maxFeatures=50&outputFormat=json',
             parser: new ol.parser.GeoJSON()
           })
         })
