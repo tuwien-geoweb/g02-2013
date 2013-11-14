@@ -30,7 +30,7 @@
         }),
         new ol.layer.Vector({
           source: new ol.source.Vector({
-            url: 'http://data.wien.gv.at/daten/wfs?service=WFS&request=GetFeature&version=1.1.0&typeName=ogdwien:CITYBIKEOGD&srsName=EPSG:4326&outputFormat=json',
+            url: 'http://student.ifip.tuwien.ac.at/geoserver/g02_2013/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g02_2013:CITYBIKEOGD&maxFeatures=50&outputFormat=json',
             parser: new ol.parser.GeoJSON()
           })
         })
