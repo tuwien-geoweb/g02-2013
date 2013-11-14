@@ -34,7 +34,7 @@
     </style>
   </head>
 
-  <body onload="init()">
+  <body>
     
     <div class="container">
     
@@ -114,7 +114,6 @@
     
     var map;
     
-    function initMap() {
       var map = new ol.Map({
       target: 'map',
       renderer: ol.RendererHint.CANVAS,
@@ -134,23 +133,7 @@
         })
       ]
     });
-    }
     
-  function init(){
-
-  initMap(); 
-
-  var users = new OpenLayers.Layer.WMS( "feedback",
-                  "http://student.ifip.tuwien.ac.at/geoserver/wms",
-                  { 
-                    "layers":"g02_2013:feedback",
-                    "format":"image/png" },
-                  { "reproject":"true" }
-                  );
-
-  map.addLayer(users);
-
-}
     </script>
         
   </body>
