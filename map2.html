@@ -30,9 +30,13 @@
         }),
         new ol.layer.Vector({
           source: new ol.source.Vector({
-            url: 'http://student.ifip.tuwien.ac.at/geoserver/g02_2013/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g02_2013:CITYBIKEOGD&maxFeatures=50&outputFormat=json',
+            url: 'http://student.ifip.tuwien.ac.at/geoserver/g02_2013/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g02_2013:BAUBLOCKOGD&srsName=EPSG:4326&outputFormat=json',
             parser: new ol.parser.GeoJSON()
           })
+          ew ol.layer.Vector({
+          source: new ol.source.Vector({
+            url: 'http://student.ifip.tuwien.ac.at/geoserver/g02_2013/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g02_2013:CITYBIKEOGD&outputFormat=json',
+            parser: new ol.parser.GeoJSON()
         })
       ]      
     });</script>
