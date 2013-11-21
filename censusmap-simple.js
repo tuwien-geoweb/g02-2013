@@ -29,3 +29,17 @@ topics.onchange = function() {
   });
 };
 
+// Load variables into dropdown
+var xhr = new XMLHttpRequest();
+xhr.open("GET", "data/DataDict.txt");
+xhr.onload = function() {
+  var lines = xhr.responseText.split('\n');
+  // We start at line 3 - line 1 is column names, line 2 is not a variable
+  for (var i = 2, ii = lines.length; i < ii; ++i) {
+    var option = document.createElement('option');
+    option.value = lines[i].substr(0, 10).trim();
+    option.innerHTML = lines[i].substr(10, 105).trim();
+    topics.appendChild(option);
+  }
+};
+xhr.send();
