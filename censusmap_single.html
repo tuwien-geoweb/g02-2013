@@ -13,7 +13,7 @@
       html, body, #map {
         height: 100%;
       }
-      #map { <!-- Map beginnt 50px von oben -->
+      #map { 
         padding-top: 50px;
       }
       .overlay {  
@@ -22,6 +22,50 @@
         left: 10px;
         bottom: 10px;
         opacity: 0.6;
+      }
+      .ol-popup {
+        display: none;
+        position: absolute;
+        background-color: white;
+        -moz-box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+        -webkit-filter: drop-shadow(0 1px 4px rgba(0,0,0,0.2));
+        filter: drop-shadow(0 1px 4px rgba(0,0,0,0.2));
+        padding: 15px;
+        border-radius: 10px;
+        border: 1px solid #cccccc;
+        bottom: 12px;
+        left: -50px;
+      }
+      .ol-popup:after, .ol-popup:before {
+        top: 100%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+      }
+      .ol-popup:after {
+        border-top-color: white;
+        border-width: 10px;
+        left: 48px;
+        margin-left: -10px;
+      }
+      .ol-popup:before {
+        border-top-color: #cccccc;
+        border-width: 11px;
+        left: 48px;
+        margin-left: -11px;
+      }
+      .ol-popup .close {
+        position: absolute;
+        top: 2px;
+        right: 8px;
+      }
+      .ol-popup iframe {
+        width: 500px;
+        height: 120px;
+        border: 0;
       }
     </style>
   </head>
@@ -38,6 +82,11 @@
     </nav>
     <div id="map">
       <img class="overlay img-rounded" src="/geoserver/g02_2013/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH=20&HEIGHT=20&STRICT=false&style=g02_2013_stddev">
+    <div id="popup" class="ol-popup">
+    <button id="popup-closer" class="close">&times;</button>
+       <div id="popup-content"></div>
+       </div>
+    </div>
     <script type="text/javascript" src="censusmap-simple.js"></script>
   </body>
 </html>
