@@ -18,6 +18,7 @@ olMap = new ol.Map({
   view: new ol.View2D({
     center: [-10764594.0, 4523072.0],
     zoom: 5
+    maxzoom: 18
   })
 });
 
