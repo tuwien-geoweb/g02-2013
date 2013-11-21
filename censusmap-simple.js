@@ -20,3 +20,12 @@ olMap = new ol.Map({
     zoom: 5
   })
 });
+
+// Add behaviour to dropdown
+var topics = document.getElementById('topics');
+topics.onchange = function() {
+  wmsLayer.getSource().updateParams({
+    'viewparams': 'column:' + topics.options[topics.selectedIndex].value
+  });
+};
+
