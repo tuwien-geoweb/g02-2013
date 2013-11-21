@@ -45,4 +45,30 @@ xhr.onload = function() {
 };
 xhr.send();
 
+// Add behaviour to the popup's close button
+var popupContainer = document.getElementById('popup');
+document.getElementById('popup-closer').onclick = function() {
+  popupContainer.style.display = 'none';
+  return false;
+};
+
+// Create an ol.Overlay with the popup so it is anchored to the map
+var popup = new ol.Overlay({
+  element: popupContainer
+});
+olMap.addOverlay(popup);
+
+// Handle map clicks to send a GetFeatureInfo request and open the popup
+olMap.on('singleclick', function(evt) {
+  olMap.getFeatureInfo({
+    pixel: evt.getPixel(),
+    success: function (info) {
+      var mapCoordinate = evt.getCoordinate();
+      popup.setPosition(mapCoordinate);
+      document.getElementById('popup-content').innerHTML = info.join('');
+      popupContainer.style.display = 'block';
+    }
+  });
+});
+
 
