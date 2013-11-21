@@ -31,7 +31,7 @@ topics.onchange = function() {
 
 // Load variables into dropdown
 var xhr = new XMLHttpRequest();
-xhr.open("GET", "data/DataDict.txt");
+xhr.open("GET", "data/datadict.txt");
 xhr.onload = function() {
   var lines = xhr.responseText.split('\n');
   // We start at line 3 - line 1 is column names, line 2 is not a variable
