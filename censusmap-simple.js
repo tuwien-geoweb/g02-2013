@@ -34,7 +34,8 @@ var xhr = new XMLHttpRequest();
 xhr.open("GET", "data/datadict.txt");
 xhr.onload = function() {
   var lines = xhr.responseText.split('\n');
-  // We start at line 3 - line 1 is column names, line 2 is not a variable
+  
+// We start at line 3 - line 1 is column names, line 2 is not a variable
   for (var i = 2, ii = lines.length; i < ii; ++i) {
     var option = document.createElement('option');
     option.value = lines[i].substr(0, 10).trim();
@@ -43,3 +44,5 @@ xhr.onload = function() {
   }
 };
 xhr.send();
+
+
