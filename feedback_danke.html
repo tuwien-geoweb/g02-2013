@@ -61,14 +61,29 @@
         </div><!--/.nav-collapse -->
       </div>
     </div>
+    
+    <div class="modal fade" id="danke" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Danke!</h4>
+      </div>
+      <div class="modal-body">
+        Dein Feedback wurde abgesendet
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Schließen</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div>
 
-    <div class="container">
-
-Danke! Dein Kommentar wurde abgesendet!
-
-    </div> <!-- /container -->
-
-
+<script>
+		jQuery(function( $ ){
+		$('#danke').modal('show')
+		});	
+</script>
     <!-- Bootstrap core JavaScript
 ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
