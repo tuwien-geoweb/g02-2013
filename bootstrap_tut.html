@@ -29,7 +29,6 @@
   </head>
 
   <body>
-
     <!-- Fixed navbar -->
     <div class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container">
@@ -45,11 +44,23 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">Home</a></li>
-            <li><a href="#contact">Projektbeschreibung</a></li>
-            <li><a href="#contact">Übungsbeispiele</a></li>
-            <li><a href="#contact">Wohnstandortsuche</a></li>
-            <li><a href="#contact">Impressum</a></li>
-            <li><a href="#contact">Kontakt</a></li>
+            <li><a href="projektbeschreibung.html">Projektbeschreibung</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Übungsbeispiele<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="divider"></li>
+                <li class="dropdown-header">Group Exercises:</li>
+                <li><a href="bootstrap_tut.html">Bootstrap Tutorial</a></li>
+                <li><a href="../Geoweb_Aufgabe2_Gruppe2.pdf" target="_blank">Publish Shape-File in Geoserver</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Exercises:</li>
+                <li><a href="feedback_geom_boots.html">Feedback Formular mit Karte</a></li>
+                <li><a href="osm.html">OpenStreetsMap Nominatim</a></li>
+              </ul>
+            </li>
+            <li><a href="wohnstandortsuche.html">Wohnstandortsuche</a></li>
+            <li><a href="impressum.html">Impressum</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
         </div><!--/.nav-collapse -->
       </div>
     </div>
