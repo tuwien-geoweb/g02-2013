@@ -5,7 +5,7 @@ var osmLayer = new ol.layer.Tile({source: new ol.source.OSM()});
 var wmsLayer = new ol.layer.Image({
   source: new ol.source.ImageWMS({
     url: '/geoserver/wms',
-    params: {'LAYERS': 'g02_2013:g02_2013_normalized'}
+    params: {'LAYERS': 'g02_2013:ZAEHLGEBIETOGD'}
   }),
   opacity: 0.6
 });
