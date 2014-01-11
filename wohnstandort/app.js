@@ -16,7 +16,7 @@ olMap = new ol.Map({
   renderer: ol.RendererHint.CANVAS,
   layers: [osmLayer, wmsLayer],
   view: new ol.View2D({
-    center: [16.371345520019528, 48.20888815483086],
+    center: ol.proj.transform([16.37, 48.21], 'EPSG:4326', 'EPSG:3857'),
     zoom: 5,
     maxZoom: 18
   })
