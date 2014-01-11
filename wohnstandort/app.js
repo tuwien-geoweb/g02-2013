@@ -16,7 +16,7 @@ olMap = new ol.Map({
   renderer: ol.RendererHint.CANVAS,
   layers: [osmLayer, wmsLayer],
   view: new ol.View2D({
-    center: [-10764594.0, 4523072.0],
+    center: [16.371345520019528, 48.20888815483086],
     zoom: 5,
     maxZoom: 18
   })
