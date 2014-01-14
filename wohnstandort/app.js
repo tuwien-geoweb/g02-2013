@@ -14,7 +14,7 @@ var wmsLayer = new ol.layer.Image({
 olMap = new ol.Map({
   target: 'map',
   renderer: ol.RendererHint.CANVAS,
-  layers: [osmLayer, wmsLayer],
+  layers: [osmLayer, wmsLayer, kindergarten1],
   view: new ol.View2D({
     center: ol.proj.transform([16.37, 48.21], 'EPSG:4326', 'EPSG:3857'),
     zoom: 11,
