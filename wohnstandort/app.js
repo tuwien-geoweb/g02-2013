@@ -46,7 +46,7 @@ var hundezone = new ol.layer.Vector({
             style: new ol.style.Style({
                      symbolizers: [
                new ol.style.Icon({
-                        url: '../../symbole/kindergarten.png',
+                        url: '../../symbole/hund.png',
                  })
                   ]
             })
