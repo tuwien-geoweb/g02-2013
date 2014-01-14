@@ -10,6 +10,21 @@ var wmsLayer = new ol.layer.Image({
   opacity: 0.6
 });
 
+var kindergarten1 = new ol.layer.Vector({
+  source: new ol.source.Vector({
+    url: 'http://student.ifip.tuwien.ac.at/http://student.ifip.tuwien.ac.at/geoserver/g02_2013/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g02_2013:KINDERGARTENOGD&outputFormat=json',
+    parser: new ol.parser.GeoJSON()
+  }),
+            style: new ol.style.Style({
+                     symbolizers: [
+               new ol.style.Icon({
+                        url: 'kindergarten.png',
+                 })
+                  ]
+            })
+}); 
+
+
 // Map object
 olMap = new ol.Map({
   target: 'map',
@@ -91,20 +106,6 @@ form.onsubmit = function(evt) {
   xhr.send();
   evt.preventDefault();
 };
-
-var kindergarten1 = new ol.layer.Vector({
-  source: new ol.source.Vector({
-    url: 'http://student.ifip.tuwien.ac.at/http://student.ifip.tuwien.ac.at/geoserver/g02_2013/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g02_2013:KINDERGARTENOGD&outputFormat=json',
-    parser: new ol.parser.GeoJSON()
-  }),
-            style: new ol.style.Style({
-                     symbolizers: [
-               new ol.style.Icon({
-                        url: 'kindergarten.png',
-                 })
-                  ]
-            })
-  }); 
 
   
 document.getElementById('kindergarten').onclick = function(e){
