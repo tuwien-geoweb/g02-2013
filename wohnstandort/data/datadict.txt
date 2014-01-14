@@ -3,11 +3,11 @@ zbez      zaehlbezirksnr
 AVIT      Durchschnittliches Einkommen per capita                                
 AVIM      Durchschnittliches Einkommen per capita Maenner
 AVIW      Durchschnittliches Einkommen per capita Frauen      
-Ew_2005   EinwohnerInnendichte 2005                                 
-Ew_2010   EinwohnerInnendichte 2010                                     
-Ew_2015   EinwohnerInnendichte 2015 
-Ew_2020   EinwohnerInnendichte 2020 
-Ew_2025   EinwohnerInnendichte 2025 
-Ew_2030   EinwohnerInnendichte 2030 
-Ew_2035   EinwohnerInnendichte 2035 
-d_km      Todesfaelle pro Quadratkilometer
+Ew2005    EinwohnerInnendichte 2005                                 
+Ew2010    EinwohnerInnendichte 2010                                     
+Ew2015    EinwohnerInnendichte 2015 
+Ew2020    EinwohnerInnendichte 2020 
+Ew2025    EinwohnerInnendichte 2025 
+Ew2030    EinwohnerInnendichte 2030 
+Ew2035    EinwohnerInnendichte 2035 
+dkm       Todesfaelle pro Quadratkilometer
