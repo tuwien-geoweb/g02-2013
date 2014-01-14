@@ -105,3 +105,5 @@ var kindergarten = new ol.layer.Vector({
                   ]
             })
   });
+  
+olMap.addLayer(kindergarten);  
