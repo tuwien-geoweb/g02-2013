@@ -252,7 +252,7 @@ document.getElementById('oeffi').onclick = function(e){
   }
 };
 
-document.getElementById('kindergarten').onclick = function(e){
+document.getElementById('schulen').onclick = function(e){
   if(this.checked==1){
     olMap.addLayer(kindergarten1);
   }else{
@@ -260,7 +260,31 @@ document.getElementById('kindergarten').onclick = function(e){
   }
 };
 
-document.getElementById('kindergarten').onclick = function(e){
+document.getElementById('schwimmbad').onclick = function(e){
+  if(this.checked==1){
+    olMap.addLayer(kindergarten1);
+  }else{
+    olMap.removeLayer(kindergarten1);
+  }
+};
+
+document.getElementById('spielplatz').onclick = function(e){
+  if(this.checked==1){
+    olMap.addLayer(kindergarten1);
+  }else{
+    olMap.removeLayer(kindergarten1);
+  }
+};
+
+document.getElementById('park').onclick = function(e){
+  if(this.checked==1){
+    olMap.addLayer(kindergarten1);
+  }else{
+    olMap.removeLayer(kindergarten1);
+  }
+};
+
+document.getElementById('markt').onclick = function(e){
   if(this.checked==1){
     olMap.addLayer(kindergarten1);
   }else{
