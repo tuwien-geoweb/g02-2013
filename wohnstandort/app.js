@@ -96,7 +96,8 @@ var kindergarten1 = new ol.layer.Vector({
   source: new ol.source.Vector({
     url: '/geoserver/g02_2013/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g02_2013:KINDERGARTENOGD&outputFormat=json',
     parser: new ol.parser.GeoJSON()
-  });
+  }),
+});  
 
   
 document.getElementById('kindergarten').onclick = function(e){
