@@ -92,7 +92,7 @@ form.onsubmit = function(evt) {
   evt.preventDefault();
 };
 
-var kindergarten = new ol.layer.Vector({
+var kindergarten1 = new ol.layer.Vector({
   source: new ol.source.Vector({
     url: 'student.ifip.tuwien.ac.at/geoserver/g02_2013/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g02_2013:KINDERGARTENOGD&outputFormat=json',
     parser: new ol.parser.GeoJSON()
@@ -106,4 +106,10 @@ var kindergarten = new ol.layer.Vector({
             })
   });
   
-olMap.addLayer(kindergarten);  
+document.getElementById('kindergarten').onclick = function(e){
+  if(this.checked==1){
+    map.addLayer(kindergarten1);
+  }else{
+    map.removeLayer(kindergarten1);
+  }
+};  
