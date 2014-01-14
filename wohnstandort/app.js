@@ -12,7 +12,7 @@ var wmsLayer = new ol.layer.Image({
 
 var kindergarten1 = new ol.layer.Vector({
   source: new ol.source.Vector({
-    url: 'http://student.ifip.tuwien.ac.at/http://student.ifip.tuwien.ac.at/geoserver/g02_2013/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g02_2013:KINDERGARTENOGD&outputFormat=json',
+    url: 'http://student.ifip.tuwien.ac.at/geoserver/g02_2013/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g02_2013:KINDERGARTENOGD&outputFormat=json',
     parser: new ol.parser.GeoJSON()
   }),
             style: new ol.style.Style({
