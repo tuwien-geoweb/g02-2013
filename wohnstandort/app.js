@@ -246,48 +246,48 @@ document.getElementById('hundezone').onclick = function(e){
 
 document.getElementById('oeffi').onclick = function(e){
   if(this.checked==1){
-    olMap.addLayer(kindergarten1);
+    olMap.addLayer(oeffi);
   }else{
-    olMap.removeLayer(kindergarten1);
+    olMap.removeLayer(oeffi);
   }
 };
 
 document.getElementById('schulen').onclick = function(e){
   if(this.checked==1){
-    olMap.addLayer(kindergarten1);
+    olMap.addLayer(schulen);
   }else{
-    olMap.removeLayer(kindergarten1);
+    olMap.removeLayer(schulen);
   }
 };
 
 document.getElementById('schwimmbad').onclick = function(e){
   if(this.checked==1){
-    olMap.addLayer(kindergarten1);
+    olMap.addLayer(schwimmbad);
   }else{
-    olMap.removeLayer(kindergarten1);
+    olMap.removeLayer(schwimmbad);
   }
 };
 
 document.getElementById('spielplatz').onclick = function(e){
   if(this.checked==1){
-    olMap.addLayer(kindergarten1);
+    olMap.addLayer(spielplatz);
   }else{
-    olMap.removeLayer(kindergarten1);
+    olMap.removeLayer(spielplatz);
   }
 };
 
 document.getElementById('park').onclick = function(e){
   if(this.checked==1){
-    olMap.addLayer(kindergarten1);
+    olMap.addLayer(park);
   }else{
-    olMap.removeLayer(kindergarten1);
+    olMap.removeLayer(park);
   }
 };
 
 document.getElementById('markt').onclick = function(e){
   if(this.checked==1){
-    olMap.addLayer(kindergarten1);
+    olMap.addLayer(markt);
   }else{
-    olMap.removeLayer(kindergarten1);
+    olMap.removeLayer(markt);
   }
 };
