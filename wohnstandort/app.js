@@ -22,6 +22,118 @@ var kindergarten1 = new ol.layer.Vector({
                  })
                   ]
             })
+});
+
+var citybike = new ol.layer.Vector({
+  source: new ol.source.Vector({
+    url: 'http://student.ifip.tuwien.ac.at/geoserver/g02_2013/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g02_2013:CITYBIKEOGD1&outputFormat=json',
+    parser: new ol.parser.GeoJSON()
+  }),
+            style: new ol.style.Style({
+                     symbolizers: [
+               new ol.style.Icon({
+                        url: '../../symbole/kindergarten.png',
+                 })
+                  ]
+            })
+}); 
+
+var hundezone = new ol.layer.Vector({
+  source: new ol.source.Vector({
+    url: 'http://student.ifip.tuwien.ac.at/geoserver/g02_2013/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g02_2013:HUNDEZONEOGD&outputFormat=json',
+    parser: new ol.parser.GeoJSON()
+  }),
+            style: new ol.style.Style({
+                     symbolizers: [
+               new ol.style.Icon({
+                        url: '../../symbole/kindergarten.png',
+                 })
+                  ]
+            })
+}); 
+
+var oeffi = new ol.layer.Vector({
+  source: new ol.source.Vector({
+    url: 'http://student.ifip.tuwien.ac.at/geoserver/g02_2013/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g02_2013:OEFFHALTESTOGDPoint&outputFormat=json',
+    parser: new ol.parser.GeoJSON()
+  }),
+            style: new ol.style.Style({
+                     symbolizers: [
+               new ol.style.Icon({
+                        url: '../../symbole/kindergarten.png',
+                 })
+                  ]
+            })
+}); 
+
+var schulen = new ol.layer.Vector({
+  source: new ol.source.Vector({
+    url: 'http://student.ifip.tuwien.ac.at/geoserver/g02_2013/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g02_2013:SCHULEOGD&outputFormat=json',
+    parser: new ol.parser.GeoJSON()
+  }),
+            style: new ol.style.Style({
+                     symbolizers: [
+               new ol.style.Icon({
+                        url: '../../symbole/kindergarten.png',
+                 })
+                  ]
+            })
+});
+
+var schwimmbad = new ol.layer.Vector({
+  source: new ol.source.Vector({
+    url: 'http://student.ifip.tuwien.ac.at/geoserver/g02_2013/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g02_2013:SCHWIMMBADOGD&outputFormat=json',
+    parser: new ol.parser.GeoJSON()
+  }),
+            style: new ol.style.Style({
+                     symbolizers: [
+               new ol.style.Icon({
+                        url: '../../symbole/kindergarten.png',
+                 })
+                  ]
+            })
+}); 
+
+var spielplatz = new ol.layer.Vector({
+  source: new ol.source.Vector({
+    url: 'http://student.ifip.tuwien.ac.at/geoserver/g02_2013/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g02_2013:SPIELPLATZOGD&outputFormat=json',
+    parser: new ol.parser.GeoJSON()
+  }),
+            style: new ol.style.Style({
+                     symbolizers: [
+               new ol.style.Icon({
+                        url: '../../symbole/kindergarten.png',
+                 })
+                  ]
+            })
+}); 
+
+var park = new ol.layer.Vector({
+  source: new ol.source.Vector({
+    url: 'http://student.ifip.tuwien.ac.at/geoserver/g02_2013/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g02_2013:PARKANLAGEOGD&outputFormat=json',
+    parser: new ol.parser.GeoJSON()
+  }),
+            style: new ol.style.Style({
+                     symbolizers: [
+               new ol.style.Icon({
+                        url: '../../symbole/kindergarten.png',
+                 })
+                  ]
+            })
+});
+
+var markt = new ol.layer.Vector({
+  source: new ol.source.Vector({
+    url: 'http://student.ifip.tuwien.ac.at/geoserver/g02_2013/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g02_2013:MAERKTEOGD&outputFormat=json',
+    parser: new ol.parser.GeoJSON()
+  }),
+            style: new ol.style.Style({
+                     symbolizers: [
+               new ol.style.Icon({
+                        url: '../../symbole/kindergarten.png',
+                 })
+                  ]
+            })
 }); 
 
 
