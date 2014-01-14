@@ -3,7 +3,7 @@ zbez      zaehlbezirksnr
 AVIT      Durchschnittliches Einkommen per capita                                
 AVIM      Durchschnittliches Einkommen per capita Maenner
 AVIW      Durchschnittliches Einkommen per capita Frauen      
-Ew2005    EinwohnerInnendichte                                 
+Ew2005    EinwohnerInnendichte 2005                                
 Ew2010    EinwohnerInnendichte 2010                                     
 Ew2015    EinwohnerInnendichte 2015 
 Ew2020    EinwohnerInnendichte 2020 
