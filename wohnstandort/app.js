@@ -32,7 +32,7 @@ var citybike = new ol.layer.Vector({
             style: new ol.style.Style({
                      symbolizers: [
                new ol.style.Icon({
-                        url: '../../symbole/kindergarten.png',
+                        url: '../../symbole/city.png',
                  })
                   ]
             })
@@ -52,20 +52,6 @@ var hundezone = new ol.layer.Vector({
             })
 }); 
 
-var oeffi = new ol.layer.Vector({
-  source: new ol.source.Vector({
-    url: 'http://student.ifip.tuwien.ac.at/geoserver/g02_2013/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g02_2013:OEFFHALTESTOGDPoint&outputFormat=json',
-    parser: new ol.parser.GeoJSON()
-  }),
-            style: new ol.style.Style({
-                     symbolizers: [
-               new ol.style.Icon({
-                        url: '../../symbole/kindergarten.png',
-                 })
-                  ]
-            })
-}); 
-
 var schulen = new ol.layer.Vector({
   source: new ol.source.Vector({
     url: 'http://student.ifip.tuwien.ac.at/geoserver/g02_2013/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g02_2013:SCHULEOGD&outputFormat=json',
@@ -74,7 +60,7 @@ var schulen = new ol.layer.Vector({
             style: new ol.style.Style({
                      symbolizers: [
                new ol.style.Icon({
-                        url: '../../symbole/kindergarten.png',
+                        url: '../../symbole/schule.png',
                  })
                   ]
             })
@@ -88,7 +74,7 @@ var schwimmbad = new ol.layer.Vector({
             style: new ol.style.Style({
                      symbolizers: [
                new ol.style.Icon({
-                        url: '../../symbole/kindergarten.png',
+                        url: '../../symbole/schwimm.png',
                  })
                   ]
             })
@@ -102,7 +88,7 @@ var spielplatz = new ol.layer.Vector({
             style: new ol.style.Style({
                      symbolizers: [
                new ol.style.Icon({
-                        url: '../../symbole/kindergarten.png',
+                        url: '../../symbole/platz.png',
                  })
                   ]
             })
@@ -116,7 +102,7 @@ var park = new ol.layer.Vector({
             style: new ol.style.Style({
                      symbolizers: [
                new ol.style.Icon({
-                        url: '../../symbole/kindergarten.png',
+                        url: '../../symbole/parks.png',
                  })
                   ]
             })
@@ -130,7 +116,7 @@ var markt = new ol.layer.Vector({
             style: new ol.style.Style({
                      symbolizers: [
                new ol.style.Icon({
-                        url: '../../symbole/kindergarten.png',
+                        url: '../../symbole/korb.png',
                  })
                   ]
             })
