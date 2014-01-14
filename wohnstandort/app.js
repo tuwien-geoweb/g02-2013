@@ -227,3 +227,43 @@ document.getElementById('kindergarten').onclick = function(e){
     olMap.removeLayer(kindergarten1);
   }
 };
+
+document.getElementById('citybike').onclick = function(e){
+  if(this.checked==1){
+    olMap.addLayer(citybike);
+  }else{
+    olMap.removeLayer(citybike);
+  }
+};
+
+document.getElementById('hundezone').onclick = function(e){
+  if(this.checked==1){
+    olMap.addLayer(hundezone);
+  }else{
+    olMap.removeLayer(hundezone);
+  }
+};
+
+document.getElementById('oeffi').onclick = function(e){
+  if(this.checked==1){
+    olMap.addLayer(kindergarten1);
+  }else{
+    olMap.removeLayer(kindergarten1);
+  }
+};
+
+document.getElementById('kindergarten').onclick = function(e){
+  if(this.checked==1){
+    olMap.addLayer(kindergarten1);
+  }else{
+    olMap.removeLayer(kindergarten1);
+  }
+};
+
+document.getElementById('kindergarten').onclick = function(e){
+  if(this.checked==1){
+    olMap.addLayer(kindergarten1);
+  }else{
+    olMap.removeLayer(kindergarten1);
+  }
+};
