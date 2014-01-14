@@ -100,7 +100,7 @@ var kindergarten1 = new ol.layer.Vector({
             style: new ol.style.Style({
                      symbolizers: [
                new ol.style.Icon({
-                        url: '/kindergarten.png',
+                        url: 'kindergarten.png',
                  })
                   ]
             })
