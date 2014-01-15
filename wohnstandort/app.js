@@ -296,7 +296,7 @@ markers = new OpenLayers.Layer.Markers( "Markers" );
 markers.id = "Markers";
 map.addLayer(markers);
 
-map.events.register("click", map, function(e) {
+map.events.register("singleclick", map, function(e) {
       //var position = this.events.getMousePosition(e);
       var position = map.getLonLatFromPixel(e.xy);
       var size = new OpenLayers.Size(21,25);
