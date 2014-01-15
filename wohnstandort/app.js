@@ -122,7 +122,7 @@ var markt = new ol.layer.Vector({
             })
 }); 
 
-var markt = new ol.layer.Vector({
+var ubahn = new ol.layer.Vector({
   source: new ol.source.Vector({
     url: 'http://student.ifip.tuwien.ac.at/geoserver/g02_2013/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g02_2013:UBAHNHALTOGD&outputFormat=json',
     parser: new ol.parser.GeoJSON()
@@ -281,5 +281,13 @@ document.getElementById('markt').onclick = function(e){
     olMap.addLayer(markt);
   }else{
     olMap.removeLayer(markt);
+  }
+};
+
+document.getElementById('ubahn').onclick = function(e){
+  if(this.checked==1){
+    olMap.addLayer(ubahn);
+  }else{
+    olMap.removeLayer(ubahn);
   }
 };
