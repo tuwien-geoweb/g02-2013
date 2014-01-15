@@ -130,7 +130,7 @@ var ubahn = new ol.layer.Vector({
             style: new ol.style.Style({
                      symbolizers: [
                new ol.style.Icon({
-                        url: '../../symbole/korb.png',
+                        url: '../../symbole/u.png',
                  })
                   ]
             })
