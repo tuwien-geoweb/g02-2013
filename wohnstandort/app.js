@@ -1,6 +1,10 @@
 // Base map
 var osmLayer = new ol.layer.Tile({source: new ol.source.OSM()});
 
+var markers = new OpenLayers.Layer.Markers( "Markers" );
+map.addLayer(markers);
+
+
 // Census map layer
 var wmsLayer = new ol.layer.Image({
   source: new ol.source.ImageWMS({
