@@ -10,6 +10,10 @@ var wmsLayer = new ol.layer.Image({
   opacity: 0.6
 });
 
+var markerGut = L.marker([40.20682894891699, 13.370315551757812], {
+			draggable:'true'
+			}).addTo(map);
+
 var kindergarten1 = new ol.layer.Vector({
   source: new ol.source.Vector({
     url: 'http://student.ifip.tuwien.ac.at/geoserver/g02_2013/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g02_2013:KINDERGARTENOGD&outputFormat=json',
