@@ -122,6 +122,20 @@ var markt = new ol.layer.Vector({
             })
 }); 
 
+var markt = new ol.layer.Vector({
+  source: new ol.source.Vector({
+    url: 'http://student.ifip.tuwien.ac.at/geoserver/g02_2013/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g02_2013:UBAHNHALTOGD&outputFormat=json',
+    parser: new ol.parser.GeoJSON()
+  }),
+            style: new ol.style.Style({
+                     symbolizers: [
+               new ol.style.Icon({
+                        url: '../../symbole/korb.png',
+                 })
+                  ]
+            })
+}); 
+
 
 // Map object
 olMap = new ol.Map({
