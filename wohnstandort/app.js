@@ -10,6 +10,16 @@ var wmsLayer = new ol.layer.Image({
   opacity: 0.6
 });
 
+    var markers = new OpenLayers.Layer.Markers( "Markers" );
+    map.addLayer(markers);
+
+    var size = new OpenLayers.Size(21,25);
+    var offset = new OpenLayers.Pixel(-(size.w/2), -size.h);
+    var icon = new OpenLayers.Icon('http://www.openlayers.org/dev/img/marker.png', size, offset);
+    markers.addMarker(new OpenLayers.Marker(new OpenLayers.LonLat(16.37,48.21),icon));
+    markers.addMarker(new OpenLayers.Marker(new OpenLayers.LonLat(16.37,48.21),icon.clone()));
+    
+
 var kindergarten1 = new ol.layer.Vector({
   source: new ol.source.Vector({
     url: 'http://student.ifip.tuwien.ac.at/geoserver/g02_2013/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g02_2013:KINDERGARTENOGD&outputFormat=json',
