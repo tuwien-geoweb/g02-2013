@@ -1,4 +1,3 @@
-
 // Base map
 var osmLayer = new ol.layer.Tile({source: new ol.source.OSM()});
 
@@ -11,6 +10,16 @@ var wmsLayer = new ol.layer.Image({
   }),
   opacity: 0.6
 });
+
+var pos = ol.proj.transform([16.3725, 48.208889], 'EPSG:4326', 'EPSG:3857');
+
+var marker = new ol.Overlay({
+  position: pos,
+  positioning: ol.OverlayPositioning.CENTER_CENTER,
+  element: document.getElementById('marker'),
+  stopEvent: false
+});
+map.addOverlay(marker);
 
 var kindergarten1 = new ol.layer.Vector({
   source: new ol.source.Vector({
