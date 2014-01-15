@@ -1,4 +1,4 @@
-map = new OpenLayers.Map("mapdiv");
+map = new OpenLayers.Map("map");
     map.addLayer(new OpenLayers.Layer.OSM());
 
     var lonLat = new OpenLayers.LonLat( -0.1279688 ,51.5077286 )
