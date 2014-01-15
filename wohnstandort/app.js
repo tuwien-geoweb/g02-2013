@@ -1,6 +1,8 @@
 // Base map
 var osmLayer = new ol.layer.Tile({source: new ol.source.OSM()});
 
+var marker = L.marker([51.5, -0.09]).addTo(map);
+
 // Census map layer
 var wmsLayer = new ol.layer.Image({
   source: new ol.source.ImageWMS({
