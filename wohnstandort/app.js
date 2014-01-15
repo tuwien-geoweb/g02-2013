@@ -230,14 +230,6 @@ document.getElementById('hundezone').onclick = function(e){
   }
 };
 
-document.getElementById('oeffi').onclick = function(e){
-  if(this.checked==1){
-    olMap.addLayer(oeffi);
-  }else{
-    olMap.removeLayer(oeffi);
-  }
-};
-
 document.getElementById('schulen').onclick = function(e){
   if(this.checked==1){
     olMap.addLayer(schulen);
