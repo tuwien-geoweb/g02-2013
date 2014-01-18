@@ -19,7 +19,7 @@ geolocation.bindTo('projection', view);
 
 var marker = new ol.Overlay({
   map: map,
-  element: /** @type {Element} */ ($('<i/>').addClass('glyphicon glyphicon-flag').get(0))
+  element: document.getElementById('marker')
 });
 // bind the marker position to the device location.
 marker.bindTo('position', geolocation);
