@@ -1,31 +1,72 @@
-var osm = new ol.layer.Tile({
-      source: new ol.source.OSM()
-    });
-
-var view = new ol.View2D({center: ol.proj.transform([16.37, 48.21], 'EPSG:4326', 'EPSG:3857'),
-    zoom: 12,
-    maxZoom: 18
-    });
-
-var map = new ol.Map({
-  layers: [osm],
-  renderers: ol.RendererHints.CANVAS,
-  target: 'map',
-  view: view
+var raster = new ol.layer.Tile({
+  source: new ol.source.TileJSON({
+    url: 'http://api.tiles.mapbox.com/v3/mapbox.geography-class.jsonp'
+  })
 });
 
-var geolocation = new ol.Geolocation();
-geolocation.bindTo('projection', map.getView());
-geolocation.bindTo('position', map.getView(), 'center');
-geolocation.setTracking(true);
+var style = new ol.style.Style({
+  symbolizers: [
+    new ol.style.Icon({
+      url: 'data/icon.png',
+      yOffset: -22
+    })
+  ]
+});
 
-var exampleLoc = ol.proj.transform(
-    [16.37, 48.21], 'EPSG:4326', 'EPSG:3857');
+var vector = new ol.layer.Vector({
+  source: new ol.source.Vector({
+    features: [
+      new ol.Feature({
+        name: 'Null Island',
+        population: 4000,
+        rainfall: 500,
+        geometry: new ol.geom.Point([0, 0])
+      })
+    ]
+  }),
+  style: style
+});
 
-map.addOverlay(new ol.Overlay({
-  position: exampleLoc,
-  element: $('<div>').addClass('marker')
-      .tooltip({title: 'Hello, world!', trigger: 'click'})
-}));
+var map = new ol.Map({
+  layers: [raster, vector],
+  renderer: ol.RendererHint.CANVAS,
+  target: 'map',
+  view: new ol.View2D({
+    center: [0, 0],
+    zoom: 3
+  })
+});
 
+var element = document.getElementById('popup');
+
+var popup = new ol.Overlay({
+  element: element,
+  positioning: ol.OverlayPositioning.BOTTOM_CENTER,
+  stopEvent: false
+});
+map.addOverlay(popup);
+
+
+map.on('singleclick', function(evt) {
+  map.getFeatures({
+    pixel: evt.getPixel(),
+    layers: [vector],
+    success: function(layerFeatures) {
+      var feature = layerFeatures[0][0];
+      if (feature) {
+        var geometry = feature.getGeometry();
+        var coord = geometry.getCoordinates();
+        popup.setPosition(coord);
+        $(element).popover({
+          'placement': 'top',
+          'html': true,
+          'content': feature.get('name')
+        });
+        $(element).popover('show');
+      } else {
+        $(element).popover('destroy');
+      }
+    }
+  });
+});
 
