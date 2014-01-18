@@ -12,6 +12,7 @@ olMap = new ol.Map({
   target: 'map',
   renderer: ol.RendererHint.CANVAS,
   layers: [osmLayer],
+  view: view
 });
 
 
