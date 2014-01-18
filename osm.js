@@ -16,6 +16,9 @@ var map = new ol.Map({
 
 var geolocation = new ol.Geolocation();
 geolocation.bindTo('projection', view);
+geolocation.on('change:position', function setPosition() {
+  olmap.getView().setCenter(geolocation.getPosition())
+});
 
 var marker = new ol.Overlay({
   map: map,
