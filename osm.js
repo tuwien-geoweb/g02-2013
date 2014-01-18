@@ -44,6 +44,7 @@ $('#locate').click(function(event){
 
 $('#stop').click(function(event){
     geolocation.setTracking(false);
+    olmap.removeOverlay(marker)
     event.preventDefault();
 });
 
