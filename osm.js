@@ -1,18 +1,15 @@
-// Base map
-var osmLayer = new ol.layer.Tile({source: new ol.source.OSM()});
-
-var view = new ol.View2D({
-		center: ol.proj.transform([16.37, 48.21], 'EPSG:4326', 'EPSG:3857'),
-		zoom: 11,
-		maxZoom: 18
-});
-
-// Map object
-olMap = new ol.Map({
+var map = new ol.Map({
+  layers: [
+    new ol.layer.TileLayer({
+      source: new ol.source.OSM()
+    })
+  ],
+  renderers: ol.RendererHints.createFromQueryData(),
   target: 'map',
-  renderer: ol.RendererHint.CANVAS,
-  layers: [osmLayer],
-  view: view
+  view: new ol.View2D({
+    center: [0, 0],
+    zoom: 2
+  })
 });
 
 
