@@ -19,12 +19,13 @@ geolocation.setTracking(true);
 geolocation.bindTo('projection', view);
 
 var marker = new ol.Overlay({
-  map: map,
-  element: document.getElementById('marker')
+  positioning: ol.OverlayPositioning.CENTER_CENTER,
+  element: document.getElementById('marker'),
+  stopEvent: false
 });
-// bind the marker position to the device location.
 marker.bindTo('position', geolocation);
 olmap.addOverlay(marker);
+}
 
 geolocation.on('error', function(error) {
   var info = document.getElementById('info');
