@@ -19,8 +19,8 @@ geolocation.bindTo('projection', map.getView());
 geolocation.bindTo('position', map.getView(), 'center');
 geolocation.setTracking(true);
 
-var marker = new OpenLayers.Layer.Markers( "marker" );
-map.addLayer(marker);
+var marker = new ol.Overlay( "marker" );
+map.addOverlay(marker);
 
 
 
