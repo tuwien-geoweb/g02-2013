@@ -7,7 +7,7 @@ var view = new ol.View2D({center: ol.proj.transform([16.37, 48.21], 'EPSG:4326',
     maxZoom: 18
 });
 
-var olmap = new ol.Map({
+var olMap = new ol.Map({
     layers: [rasterlayer],
     renderers: ol.RendererHints.CANVAS,
     target: 'map',
