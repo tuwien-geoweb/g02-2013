@@ -17,13 +17,19 @@ var olmap = new ol.Map({
 var geolocation = new ol.Geolocation();
 geolocation.setTracking(true);
 geolocation.bindTo('projection', view);
+geolocation.on('change:position', function setPosition() {
+  olmap.getView().setCenter(geolocation.getPosition())
+});
 
 var marker = new ol.Overlay({
   map: map,
-  element: document.getElementById('marker')
+  positioning: ol.OverlayPositioning.CENTER_CENTER,
+  element: document.getElementById('marker'),
+  stopEvent: false
 });
 // bind the marker position to the device location.
 marker.bindTo('position', geolocation);
+olmap.addOverlay(marker);
 
 geolocation.on('error', function(error) {
   var info = document.getElementById('info');
