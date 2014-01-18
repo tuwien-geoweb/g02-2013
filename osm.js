@@ -16,9 +16,13 @@ var map = new ol.Map({
 
 var geolocation = new ol.Geolocation();
 geolocation.bindTo('projection', view);
-geolocation.on('change:position', function() {
-  console.log(geolocation.getPosition());
+
+var marker = new ol.Overlay({
+  map: map,
+  element: /** @type {Element} */ ($('<i/>').addClass('icon-flag').get(0))
 });
+// bind the marker position to the device location.
+marker.bindTo('position', geolocation);
 
 geolocation.on('change:accuracy', function() {
   $(marker.getElement()).tooltip({
