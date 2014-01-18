@@ -19,4 +19,15 @@ geolocation.bindTo('projection', map.getView());
 geolocation.bindTo('position', map.getView(), 'center');
 geolocation.setTracking(true);
 
+var marker = new OpenLayers.Layer.Markers( "marker" );
+
+var size = new OpenLayers.Size(21,25);
+var offset = new OpenLayers.Pixel(-(size.w/2), -size.h);
+var icon = new OpenLayers.Icon('http://www.openlayers.org/dev/img/marker.png', size, offset);
+
+map.addOverlay(marker);
+      marker.bindTo('position', geolocation);
+            view.setCenter(ol.proj.transform([Number(longitude),Number(latitude)], 'EPSG:4326', 'EPSG:3857'));
+            view.setZoom(16);
+
 
