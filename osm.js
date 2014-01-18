@@ -19,28 +19,13 @@ geolocation.bindTo('projection', map.getView());
 geolocation.bindTo('position', map.getView(), 'center');
 geolocation.setTracking(true);
 
-var style = new ol.style.Style({
-  symbolizers: [
-    new ol.style.Icon({
-      url: '../symbole/hund.png',
-      yOffset: -22
-    })
-  ]
-});
+var exampleLoc = ol.proj.transform(
+    [16.37, 48.21], 'EPSG:4326', 'EPSG:3857');
 
-var vector = new ol.layer.Vector({
-  source: new ol.source.Vector({
-    features: [
-      new ol.Feature({
-        name: 'Null Island',
-        population: 4000,
-        rainfall: 500,
-        geometry: new ol.geom.Point([0, 0])
-      })
-    ]
-  }),
-  style: style
-});
-
+map.addOverlay(new ol.Overlay({
+  position: exampleLoc,
+  element: $('<div>').addClass('marker')
+      .tooltip({title: 'Hello, world!', trigger: 'click'})
+}));
 
 
