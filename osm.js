@@ -12,6 +12,4 @@ var map = new ol.Map({
   })
 });
 
-var geolocation = new ol.Geolocation();
-geolocation.bindTo('projection', map.getView());
 
