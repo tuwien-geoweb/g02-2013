@@ -15,7 +15,6 @@ var olmap = new ol.Map({
 });
 
 var geolocation = new ol.Geolocation();
-geolocation.setTracking(true);
 geolocation.bindTo('projection', view);
 geolocation.on('change:position', function setPosition() {
   olmap.getView().setCenter(geolocation.getPosition())
