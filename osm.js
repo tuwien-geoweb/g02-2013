@@ -20,7 +20,6 @@ geolocation.bindTo('projection', map.getView());
 
 var marker = new ol.Overlay({
   map: map,
-  element: /** @type {Element} */ ($('<i/>').addClass('icon-flag').get(0))
 });
 // bind the marker position to the device location.
 marker.bindTo('position', geolocation);
