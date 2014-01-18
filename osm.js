@@ -38,7 +38,6 @@ geolocation.on('error', function(error) {
 
 
 $('#locate').click(function(event){
-    event.preventDefault();
     geolocation.setTracking(true);
     alert( "GO" ); 
 });
