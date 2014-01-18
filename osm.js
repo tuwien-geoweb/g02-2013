@@ -19,8 +19,14 @@ geolocation.bindTo('projection', map.getView());
 geolocation.bindTo('position', map.getView(), 'center');
 geolocation.setTracking(true);
 
-var marker = new ol.Overlay( "marker" );
-map.addOverlay(marker);
+var marker = new ol.Overlay({
+  positioning: ol.OverlayPositioning.CENTER_CENTER,
+  element: document.getElementById('marker'),
+  stopEvent: false
+});
+marker.bindTo('position', geolocation);
+olmap.addOverlay(marker);
+}
 
 
 
