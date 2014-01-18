@@ -24,6 +24,7 @@ var marker = new ol.Overlay({
 });
 // bind the marker position to the device location.
 marker.bindTo('position', geolocation);
+olmap.addOverlay(marker);
 
 geolocation.on('change:accuracy', function() {
   $(marker.getElement()).tooltip({
