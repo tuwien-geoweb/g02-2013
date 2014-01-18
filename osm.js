@@ -16,19 +16,9 @@ var map = new ol.Map({
 
 var geolocation = new ol.Geolocation();
 geolocation.bindTo('projection', view);
-geolocation.setTracking(true); // here the browser may ask for confirmation
 geolocation.on('change:position', function() {
   console.log(geolocation.getPosition());
 });
-
-var marker = new ol.Overlay({
-  positioning: ol.OverlayPositioning.CENTER_CENTER,
-  element: document.getElementById('marker'),
-  stopEvent: false
-});
-marker.bindTo('position', geolocation);
-olmap.addOverlay(marker);
-}
 
 geolocation.on('change:accuracy', function() {
   $(marker.getElement()).tooltip({
