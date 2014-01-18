@@ -28,7 +28,6 @@ var marker = new ol.Overlay({
 });
 // bind the marker position to the device location.
 marker.bindTo('position', geolocation);
-olmap.addOverlay(marker);
 
 geolocation.on('error', function(error) {
   var info = document.getElementById('info');
@@ -39,12 +38,13 @@ geolocation.on('error', function(error) {
 
 $('#locate').click(function(event){
     geolocation.setTracking(true);
+    olmap.addOverlay(marker);
     event.preventDefault();
 });
 
 $('#stop').click(function(event){
     geolocation.setTracking(false);
-    olmap.removeOverlay(marker)
+    olmap.removeOverlay(marker);
     event.preventDefault();
 });
 
