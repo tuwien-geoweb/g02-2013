@@ -13,6 +13,13 @@ olMap = new ol.Map({
   })
 });
 
+//geolocation
+var geolocation = new ol.Geolocation();
+geolocation.setTracking(true); // here the browser may ask for confirmation
+geolocation.on('change:position', function() {
+  console.log(geolocation.getPosition());
+});
+
 // Submit query to Nominatim and zoom map to the result's extent
 var form = document.forms[0];
 form.onsubmit = function(evt) {
