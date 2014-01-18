@@ -14,7 +14,8 @@ var olmap = new ol.Map({
     view: view
 });
 
-var geolocation = new ol.Geolocation();     
+var geolocation = new ol.Geolocation();
+geolocation.setTracking(true);
 geolocation.bindTo('projection', view);
 
 var marker = new ol.Overlay({
@@ -36,8 +37,5 @@ geolocation.on('error', function(error) {
 });
 
 
-$('#locate').click(function() {
-  geolocation.setTracking(true);
-});
 
 
