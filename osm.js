@@ -14,8 +14,6 @@ var olmap = new ol.Map({
     view: view
 });
 
-function geoloc(){    // damit �ber den Button aus aufrufbar
-
 var geolocation = new ol.Geolocation();     
 geolocation.bindTo('projection', view);
 geolocation.setTracking(true); 
@@ -32,7 +30,5 @@ var marker = new ol.Overlay({
 });
 marker.bindTo('position', geolocation);
 olmap.addOverlay(marker);
-}
 
-geoloc();
 
