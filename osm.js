@@ -14,6 +14,10 @@ var olmap = new ol.Map({
     view: view
 });
 
+//Geolocation
+ 
+function geoloc(){    // damit �ber den Button aus aufrufbar
+
 var geolocation = new ol.Geolocation();     
 geolocation.bindTo('projection', view);
 geolocation.setTracking(true); 
@@ -21,6 +25,7 @@ geolocation.on('change:position', function setPosition() {
   olmap.getView().setCenter(geolocation.getPosition())
 });
 
+// an Geolocation gebundener Marker
 
 var marker = new ol.Overlay({
   positioning: ol.OverlayPositioning.CENTER_CENTER,
@@ -29,6 +34,9 @@ var marker = new ol.Overlay({
 });
 marker.bindTo('position', geolocation);
 olmap.addOverlay(marker);
+}
+
+geoloc();
 
 
 geolocation.on('error', function(error) {
