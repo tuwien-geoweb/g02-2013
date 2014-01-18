@@ -7,7 +7,7 @@ var raster = new ol.layer.Tile({
 var style = new ol.style.Style({
   symbolizers: [
     new ol.style.Icon({
-      url: 'data/icon.png',
+      url: '../symbole/hund.png',
       yOffset: -22
     })
   ]
