@@ -20,7 +20,6 @@ olMap = new ol.Map({
 //geolocation
 var geolocation = new ol.Geolocation();
 geolocation.setTracking(true); // here the browser may ask for confirmation
-geolocation.bindTo('projection', map.getView());
 geolocation.on('change:position', function() {
   console.log(geolocation.getPosition());
 });
