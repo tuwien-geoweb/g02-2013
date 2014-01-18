@@ -1,47 +1,18 @@
-// Map-Elemente
-
-    // Raster-Layer
-    
-    var rasterlayer = new ol.layer.Tile({
+var osm = new ol.layer.Tile({
       source: new ol.source.OSM()
-    });
-     
-               
-    // View
-    
-    var view = new ol.View2D({center: ol.proj.transform([16.37, 48.21], 'EPSG:4326', 'EPSG:3857'),
+});
+
+var view = new ol.View2D({center: ol.proj.transform([16.37, 48.21], 'EPSG:4326', 'EPSG:3857'),
     zoom: 12,
     maxZoom: 18
-    });
+});
     
-   
-
-
-// eigentliche Map
-
 var olmap = new ol.Map({
-  layers: [rasterlayer],
-  renderers: ol.RendererHints.CANVAS,
-  target: 'map',
-  view: view
+    layers: [osm],
+    renderers: ol.RendererHints.CANVAS,
+    target: 'map',
+    view: view
 });
-
-
-
- // Klickpunkte
-    
-    var commentLayer = new ol.layer.Image({
-  source: new ol.source.ImageWMS({
-    url: 'http://student.ifip.tuwien.ac.at/geoserver/g04_2013/wms?service=WMS&version=1.1.0&request=GetMap',
-    params: {'LAYERS': 'g04_2013:comments'}
-  })
-});
-olmap.addLayer(commentLayer);
-
-
-//Geolocation
- 
-function geoloc(){    // damit �ber den Button aus aufrufbar
 
 var geolocation = new ol.Geolocation();     
 geolocation.bindTo('projection', view);
@@ -59,9 +30,7 @@ var marker = new ol.Overlay({
 });
 marker.bindTo('position', geolocation);
 olmap.addOverlay(marker);
-}
 
-geoloc();
 
 
 
