@@ -7,7 +7,7 @@ var view = new ol.View2D({center: ol.proj.transform([16.37, 48.21], 'EPSG:4326',
     maxZoom: 18
 });
 
-var olMap = new ol.Map({
+var olmap = new ol.Map({
     layers: [rasterlayer],
     renderers: ol.RendererHints.CANVAS,
     target: 'map',
@@ -53,9 +53,9 @@ form.onsubmit = function(evt) {
     var result = JSON.parse(xhr.responseText);
     if (result.length > 0) {
       var bbox = result[0].boundingbox;
-      olMap.getView().fitExtent(ol.proj.transform([parseFloat(bbox[2]),
+      olmap.getView().fitExtent(ol.proj.transform([parseFloat(bbox[2]),
           parseFloat(bbox[0]), parseFloat(bbox[3]), parseFloat(bbox[1])],
-          'EPSG:4326', 'EPSG:3857'), olMap.getSize());
+          'EPSG:4326', 'EPSG:3857'), olmap.getSize());
     }
   };
   xhr.send();
