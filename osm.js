@@ -7,6 +7,9 @@ var view = new ol.View2D({center: ol.proj.transform([16.37, 48.21], 'EPSG:4326',
     maxZoom: 18
 });
 
+var pos = ol.proj.transform(
+    [16.37, 48.21], 'EPSG:4326', 'EPSG:3857');
+
 var olmap = new ol.Map({
     layers: [rasterlayer],
     renderers: ol.RendererHints.CANVAS,
@@ -19,6 +22,11 @@ geolocation.bindTo('projection', view);
 geolocation.on('change:position', function setPosition() {
   olmap.getView().setCenter(geolocation.getPosition())
 });
+
+map.addOverlay(new ol.Overlay({
+  position: pos,
+  element: document.getElementById('marker')
+}))
 
 var marker = new ol.Overlay({
   map: map,
