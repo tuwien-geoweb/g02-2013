@@ -39,6 +39,7 @@ geolocation.on('error', function(error) {
 $('#locate').click(function(event){
     geolocation.setTracking(true);
     olmap.addOverlay(marker);
+    $("#stopped").attr('display', 'block');
     event.preventDefault();
 });
 
