@@ -35,6 +35,9 @@ geolocation.on('error', function(error) {
   info.style.display = '';
 });
 
+geolocation.on('change:accuracy', function() {
+  console.log(this.getAccuracy())
+});
 
 $('#locate').click(function(event){
     geolocation.setTracking(true);
