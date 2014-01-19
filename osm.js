@@ -56,6 +56,12 @@ $('#search').click(function(event){
     olmap.removeOverlay(marker);
 });
 
+var nominatim = new ol.Overlay({
+          map: map,
+          position: ol.proj.transform(
+              [16.37, 48.32], 'EPSG:4326', 'EPSG:3857'),
+          element: document.getElementById('nominatim')
+});
 
 // Submit query to Nominatim and zoom map to the result's extent
 var form = document.forms[0];
@@ -80,12 +86,5 @@ form.onsubmit = function(evt) {
   xhr.send();
   evt.preventDefault();
 };
-
-      var nominatim = new ol.Overlay({
-          map: map,
-          position: ol.proj.transform(
-              [16.37, 48.32], 'EPSG:4326', 'EPSG:3857'),
-          element: document.getElementById('nominatim')
-        });
 
 
