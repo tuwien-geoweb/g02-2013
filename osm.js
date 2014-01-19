@@ -65,7 +65,7 @@ form.onsubmit = function(evt) {
   xhr.open("GET", url, true);
   xhr.onload = function() {
     var result = JSON.parse(xhr.responseText);
-    if (result.length > 0) {
+    if (result.length > 100) {
       var bbox = result[0].boundingbox;
       olmap.getView().fitExtent(ol.proj.transform([parseFloat(bbox[2]),
           parseFloat(bbox[0]), parseFloat(bbox[3]), parseFloat(bbox[1])],
