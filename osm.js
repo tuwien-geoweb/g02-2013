@@ -76,7 +76,7 @@ form.onsubmit = function(evt) {
       var nominatim = new ol.Overlay({
           map: map,
           position: ol.proj.transform(
-              [lon, lat], 'EPSG:4326', 'EPSG:3857'),
+              [parseFloat(lon), parseFloat(lat)], 'EPSG:4326', 'EPSG:3857'),
           element: document.getElementById('nominatim')
       });
       olmap.addOverlay(nominatim);
