@@ -72,11 +72,11 @@ form.onsubmit = function(evt) {
           'EPSG:4326', 'EPSG:3857'), olmap.getSize());
       var lat = result[0].lat;
       var lon = result[0].lon;
-      console.log(lat)
+      console.log(lat, lon)
       var nominatim = new ol.Overlay({
           map: map,
           position: ol.proj.transform(
-              [lat, lon], 'EPSG:4326', 'EPSG:3857'),
+              [48.2009359, lon], 'EPSG:4326', 'EPSG:3857'),
           element: document.getElementById('nominatim')
       });
       olmap.addOverlay(nominatim);
