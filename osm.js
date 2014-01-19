@@ -59,7 +59,7 @@ $('#search').click(function(event){
 var nominatim = new ol.Overlay({
           map: map,
           position: ol.proj.transform(
-              [parseFloat(lat[0]), parseFloat(lon[0])], 'EPSG:4326', 'EPSG:3857'),
+              [16, 48], 'EPSG:4326', 'EPSG:3857'),
           element: document.getElementById('nominatim')
 });
 
