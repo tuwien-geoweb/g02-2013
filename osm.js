@@ -32,7 +32,7 @@ function setCircleSize() {
 }
 setCircleSize();
 map.getView().on('change:resolution', setCircleSize);
-olmap.addOverlay(nominatim);
+olmap.addOverlay(circle);
 
 var marker = new ol.Overlay({
   map: map,
