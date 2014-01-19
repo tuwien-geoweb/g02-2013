@@ -16,10 +16,12 @@ var olmap = new ol.Map({
 
 var nominatim = new ol.Overlay({
   map: map,
-  positioning: ol.proj.transform(
+  position: ol.proj.transform(
       [16.3725, 48.208889], 'EPSG:4326', 'EPSG:3857'),
   element: document.getElementById('nominatim')
 });
+
+olmap.addOverlay(nominatim);
 
 var geolocation = new ol.Geolocation();
 geolocation.bindTo('projection', view);
@@ -29,7 +31,7 @@ geolocation.on('change:position', function setPosition() {
 
 var marker = new ol.Overlay({
   map: map,
-  positioning: ol.OverlayPositioning.CENTER_CENTER,
+  position: ol.OverlayPositioning.CENTER_CENTER,
   element: document.getElementById('marker'),
   stopEvent: false
 });
@@ -46,7 +48,6 @@ geolocation.on('error', function(error) {
 $('#locate').click(function(event){
     geolocation.setTracking(true);
     olmap.addOverlay(marker);
-    olmap.addOverlay(nominatim);
     $("#stopped").fadeIn();
     event.preventDefault();
 });
