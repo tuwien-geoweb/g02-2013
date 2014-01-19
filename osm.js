@@ -74,6 +74,7 @@ form.onsubmit = function(evt) {
       var lat = result[0].lat;
       var lon = result[0].lon;
       console.log(lat, lon)
+      olmap.addOverlay(nominatim);
     }
   };
   xhr.send();
@@ -87,4 +88,4 @@ var nominatim = new ol.Overlay({
   element: document.getElementById('nominatim')
 });
 
-olmap.addOverlay(nominatim);
+
