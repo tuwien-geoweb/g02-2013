@@ -21,6 +21,8 @@ var nominatim = new ol.Overlay({
   element: document.getElementById('nominatim')
 });
 
+olmap.addOverlay(nominatim);
+
 var geolocation = new ol.Geolocation();
 geolocation.bindTo('projection', view);
 geolocation.on('change:position', function setPosition() {
