@@ -48,6 +48,12 @@ $('#stop').click(function(event){
     event.preventDefault();
 });
 
+$('#search').click(function(event){
+    geolocation.setTracking(false);
+    olmap.removeOverlay(marker);
+    event.preventDefault();
+});
+
 // Submit query to Nominatim and zoom map to the result's extent
 var form = document.forms[0];
 form.onsubmit = function(evt) {
