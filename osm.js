@@ -7,9 +7,6 @@ var view = new ol.View2D({center: ol.proj.transform([16.37, 48.21], 'EPSG:4326',
     maxZoom: 18
 });
 
-var pos = ol.proj.transform(
-    [16.37, 48.21], 'EPSG:4326', 'EPSG:3857');
-
 var olmap = new ol.Map({
     layers: [rasterlayer],
     renderers: ol.RendererHints.CANVAS,
@@ -21,13 +18,6 @@ var geolocation = new ol.Geolocation();
 geolocation.bindTo('projection', view);
 geolocation.on('change:position', function setPosition() {
   olmap.getView().setCenter(geolocation.getPosition())
-});
-
-var nominatim = new ol.Overlay({
-  map: map,
-  position: ol.proj.transform(
-      [16.3725, 48.208889], 'EPSG:4326', 'EPSG:3857'),
-  element: document.getElementById('marker')
 });
 
 var marker = new ol.Overlay({
