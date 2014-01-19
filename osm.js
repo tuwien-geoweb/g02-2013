@@ -14,15 +14,6 @@ var olmap = new ol.Map({
     view: view
 });
 
-var nominatim = new ol.Overlay({
-  map: map,
-  position: ol.proj.transform(
-      [16.3725, 48.208889], 'EPSG:4326', 'EPSG:3857'),
-  element: document.getElementById('nominatim')
-});
-
-olmap.addOverlay(nominatim);
-
 var geolocation = new ol.Geolocation();
 geolocation.bindTo('projection', view);
 geolocation.on('change:position', function setPosition() {
@@ -88,3 +79,12 @@ form.onsubmit = function(evt) {
   xhr.send();
   evt.preventDefault();
 };
+
+var nominatim = new ol.Overlay({
+  map: map,
+  position: ol.proj.transform(
+      [lat, lon], 'EPSG:4326', 'EPSG:3857'),
+  element: document.getElementById('nominatim')
+});
+
+olmap.addOverlay(nominatim);
