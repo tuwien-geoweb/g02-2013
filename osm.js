@@ -57,6 +57,10 @@ $('#search').click(function(event){
     olmap.removeOverlay(marker);
 });
 
+$('#search"]').on('click',function(){
+ $("#tracking").hide();
+});
+
 // Submit query to Nominatim and zoom map to the result's extent
 var form = document.forms[0];
 form.onsubmit = function(evt) {
