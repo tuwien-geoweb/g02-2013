@@ -23,10 +23,14 @@ geolocation.on('change:position', function setPosition() {
   olmap.getView().setCenter(geolocation.getPosition())
 });
 
-map.addOverlay(new ol.Overlay({
-  position: pos,
-  element: document.getElementById('marker')
-}))
+var nominatim = new ol.Overlay({
+  map: map,
+  positioning: pos,
+  element: document.getElementById('marker'),
+  stopEvent: false
+});
+
+olmap.addOverlay(nominatim);
 
 var marker = new ol.Overlay({
   map: map,
