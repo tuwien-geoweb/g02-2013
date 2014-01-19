@@ -25,11 +25,11 @@ geolocation.on('change:position', function setPosition() {
 
 var nominatim = new ol.Overlay({
   map: map,
-  positioning: pos,
+  positioning: ol.OverlayPositioning.CENTER_CENTER,
   element: document.getElementById('marker'),
   stopEvent: false
 });
-
+nominatim.bindTo('position', pos);
 olmap.addOverlay(nominatim);
 
 var marker = new ol.Overlay({
