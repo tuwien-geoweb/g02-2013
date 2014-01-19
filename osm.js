@@ -74,7 +74,7 @@ form.onsubmit = function(evt) {
       var lat = result[0].lat;
       var lon = result[0].lon;
       console.log(lat, lon)
-      var location = new OpenLayers.LonLat(lat,lon).transform(new OpenLayers.Projection("EPSG:4326"), map.getProjectionObject();
+      var location = new OpenLayers.LonLat(lat,lon).transform(new OpenLayers.Projection("EPSG:4326"), map.getProjectionObject()
       console.log(location)
     }
   };
