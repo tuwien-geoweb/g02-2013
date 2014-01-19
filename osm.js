@@ -20,6 +20,20 @@ geolocation.on('change:position', function setPosition() {
   olmap.getView().setCenter(geolocation.getPosition())
 });
 
+var circle = new ol.Overlay({
+          map: map,
+          position: ol.proj.transform(
+              [parseFloat(lon), parseFloat(lat)], 'EPSG:4326', 'EPSG:3857'),
+          element: $('<div>').addClass('circle')
+      });
+function setCircleSize() {
+  var size = 2 * 400000 / map.getView().getResolution() + 'px';
+  $('.circle').width(size).height(size);
+}
+setCircleSize();
+map.getView().on('change:resolution', setCircleSize);
+olmap.addOverlay(nominatim);
+
 var marker = new ol.Overlay({
   map: map,
   position: ol.OverlayPositioning.CENTER_CENTER,
