@@ -81,5 +81,5 @@ form.onsubmit = function(evt) {
 };
 
     var location = new OpenLayers.LonLat(lat,lon).transform(new OpenLayers.Projection("EPSG:4326"), map.getProjectionObject()
-    console.log(location)
+
 
