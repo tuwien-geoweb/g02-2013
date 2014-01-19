@@ -40,6 +40,7 @@ $('#locate').click(function(event){
     geolocation.setTracking(true);
     olmap.addOverlay(marker);
     $("#stopped").fadeToggle();
+    $("#tracking").fadeToggle();
     event.preventDefault();
 });
 
@@ -47,6 +48,7 @@ $('#stop').click(function(event){
     geolocation.setTracking(false);
     olmap.removeOverlay(marker);
     $("#stopped").fadeToggle();
+    $("#tracking").fadeToggle();
     event.preventDefault();
 });
 
