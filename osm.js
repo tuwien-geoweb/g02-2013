@@ -80,4 +80,15 @@ form.onsubmit = function(evt) {
   evt.preventDefault();
 };
 
+var markersLayer = new OpenLayers.Layer.Markers("Markers");
+map.addLayer(markersLayer);
+var size = new OpenLayers.Size(21, 25);
+var offset = new OpenLayers.Pixel(-(size.w / 2), -size.h);
+var icon = new OpenLayers.Icon('http://www.openlayers.org/dev/img/marker.png', size, offset);
+
+
+marker = new OpenLayers.Marker(new OpenLayers.LonLat(12.5, 16.5), icon);
+
+markersLayer.addMarker(marker);
+
 
