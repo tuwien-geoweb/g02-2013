@@ -91,16 +91,3 @@ form.onsubmit = function(evt) {
   xhr.send();
   evt.preventDefault();
 };
-
-var markersLayer = new ol.Overlay("Markers");
-map.addOverlay(markersLayer);
-var size = new ol.Size(21, 25);
-var offset = new ol.Pixel(-(size.w / 2), -size.h);
-var icon = new ol.Icon('http://www.openlayers.org/dev/img/marker.png', size, offset);
-
-
-marker = new ol.Marker(new ol.LonLat(12.5, 16.5), icon);
-
-markersLayer.addMarker(marker);
-
-
