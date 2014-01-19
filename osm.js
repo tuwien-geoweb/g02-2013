@@ -73,7 +73,7 @@ form.onsubmit = function(evt) {
           'EPSG:4326', 'EPSG:3857'), olmap.getSize());
       var lat = result[0].lat;
       var lon = result[0].lon;
-      console.log('lat')
+      console.log(lat)
     }
   };
   xhr.send();
