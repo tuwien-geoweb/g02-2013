@@ -23,7 +23,8 @@
   
       #nominatim {
         font-size: 22px;
-        text-shadow: 0.5px 0.5px 0.5px #013;
+        text-shadow: 2px 2px 3px #013;
+        color: red;
       }
   
   .ol-attribution {
@@ -95,7 +96,7 @@
         <input type="text" class="form-control" name="query" placeholder="Adresssuche">
       </div>
       <button class="btn btn-default" type="submit" id="search"><span class="glyphicon glyphicon-search"></span></button>
-      <button class="btn btn-default" id="locate"><i class="glyphicon glyphicon-flag"></i> locate</button>
+      <button class="btn btn-default" id="locate"><i class="glyphicon glyphicon-screenshot"></i> locate</button>
       <span style="display:none" id="stopped"><button class="btn btn-default" id="stop"><i class="glyphicon glyphicon-ban-circle"></i> stop</button>
       <img src="../symbole/ajax-loader.gif">&nbsp;tracking</span>
     </form>
@@ -110,7 +111,7 @@
 
 
     <div style="display: none;">
-    <div id="nominatim"><span class="glyphicon glyphicon-screenshot"</span></div>
+    <div id="nominatim"><span class="glyphicon glyphicon-map-marker"</span></div>
     <div id="marker" title="You are here"><span class="glyphicon glyphicon-map-marker"></span></div>
     </div>
 
