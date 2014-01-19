@@ -46,13 +46,13 @@ $('#locate').click(function(event){
 $('#stop').click(function(event){
     geolocation.setTracking(false);
     olmap.removeOverlay(marker);
-    $("#stopped").fadeToggle();
+    $("#stopped").fadeOut();
     event.preventDefault();
 });
 
 $('#search').click(function(event){
     geolocation.setTracking(false);
-    $('#stopped').hide();
+    $('#stopped').fadeOut();
     olmap.removeOverlay(marker);
 });
 
