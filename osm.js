@@ -30,7 +30,7 @@ var marker = new ol.Overlay({
 marker.bindTo('position', geolocation);
 
 geolocation.on('error', function(error) {
-  var info = document.getElementById('info');
+  var info = document.getElementById('stopped');
   info.innerHTML = error.message;
   info.style.display = '';
 });
@@ -40,7 +40,6 @@ $('#locate').click(function(event){
     geolocation.setTracking(true);
     olmap.addOverlay(marker);
     $("#stopped").fadeToggle();
-    $("#tracking").fadeToggle();
     event.preventDefault();
 });
 
@@ -48,13 +47,11 @@ $('#stop').click(function(event){
     geolocation.setTracking(false);
     olmap.removeOverlay(marker);
     $("#stopped").fadeToggle();
-    $("#tracking").fadeToggle();
     event.preventDefault();
 });
 
 $('#search').click(function(event){
     geolocation.setTracking(false);
-    $('#tracking').hide();
     $('#stopped').hide();
     olmap.removeOverlay(marker);
 });
