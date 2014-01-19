@@ -71,6 +71,9 @@ form.onsubmit = function(evt) {
       olmap.getView().fitExtent(ol.proj.transform([parseFloat(bbox[2]),
           parseFloat(bbox[0]), parseFloat(bbox[3]), parseFloat(bbox[1])],
           'EPSG:4326', 'EPSG:3857'), olmap.getSize());
+      var lat = result[0].lat;
+      var lon = result[0].lon;
+      consol.log('lat')
     }
   };
   xhr.send();
